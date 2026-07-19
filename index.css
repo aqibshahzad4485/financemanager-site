@@ -288,9 +288,9 @@ a:hover {
 /* Features Grid */
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2rem;
-    margin-top: 4rem;
+    margin-top: 3rem;
 }
 .feature-card {
     background: var(--card-bg);
@@ -431,6 +431,24 @@ a:hover {
     fill: currentColor;
 }
 
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-main);
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+}
+.mobile-menu-btn svg {
+    width: 28px;
+    height: 28px;
+    stroke: currentColor;
+    stroke-width: 2;
+    transition: transform 0.3s ease;
+}
+
 /* Responsive */
 @media (max-width: 992px) {
     .hero-container {
@@ -452,18 +470,50 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--nav-bg);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+        border-bottom: 1px solid var(--border-color);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: clip-path 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        pointer-events: none;
+    }
+    .nav-links.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        pointer-events: auto;
+    }
     .nav-links a {
-        display: none; /* simple mobile hide for links */
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 1.1rem;
+        padding: 0.5rem 0;
+    }
+    .mobile-menu-btn {
+        display: block;
     }
     .hero h1 {
-        font-size: 2.75rem;
+        font-size: 2.5rem;
     }
     .section {
-        padding: 5rem 0;
+        padding: 4rem 1rem;
     }
     .legal-content {
-        padding: 2rem;
-        margin: 100px 1rem 2rem;
+        padding: 1.5rem !important;
+        margin: 80px 1rem 2rem !important;
+    }
+    .theme-toggle {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 200px;
     }
 }
 
