@@ -1,19 +1,397 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en" data-theme="dark">
 <head>
-    <title>Finance Manager</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Manager | Premium Wealth Tracking</title>
+    <meta name="description" content="Take absolute control of your wealth. Finance Manager is a modern, offline-first application designed to track expenses, handle multi-currency portfolios, manage loans, and visualize your financial future.">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪙</text></svg>">
 </head>
-
 <body>
+    <div class="bg-mesh"></div>
 
-<h1>Finance Manager</h1>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" stroke="var(--primary)" stroke-width="2" fill="rgba(22,110,247,0.1)"/>
+                    <path d="M16 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" fill="var(--warning)"/>
+                    <path d="M22 12h-4" stroke="var(--primary)" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M8 3h8a2 2 0 0 1 2 2v2H6V5a2 2 0 0 1 2-2z" stroke="var(--accent)" stroke-width="2" fill="rgba(139, 92, 246, 0.1)"/>
+                </svg>
+                Finance Manager
+            </a>
+            <div class="nav-links">
+                <a href="#features">Capabilities</a>
+                <a href="#open-source">Open Source</a>
+                <a href="#faq">Questions</a>
+                <a href="contact.html">Contact</a>
+                <a href="https://github.com/aqibshahzad4485/financemanager" target="_blank" rel="noopener noreferrer">Source Code</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <svg viewBox="0 0 24 24"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
 
-<p>Manage multiple accounts and currencies effortlessly.</p>
+    <section class="hero reveal">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span style="display:inline-block; padding: 0.5rem 1.25rem; border-radius: 50px; background: var(--glow-color); color: var(--primary); font-weight: 600; margin-bottom: 1.5rem; font-size: 0.9rem; letter-spacing: 0.5px;">NO ADS · NO TRACKING · 100% PRIVATE</span>
+                <h1>Master your wealth, <br><span class="gradient-text">effortlessly.</span></h1>
+                <p>Experience a new standard of personal finance. Built natively for Android, Finance Manager empowers you to track multi-currency portfolios, manage loans, and visualize your spending habits in a completely private environment.</p>
+                <div class="hero-btns">
+                    <a href="https://github.com/aqibshahzad4485/financemanager/releases" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        Get the App
+                    </a>
+                    <a href="https://github.com/aqibshahzad4485/financemanager" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        Explore Source Code
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-cards">
+                    <div class="card-mockup card-1">
+                        <div style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">Net Worth</div>
+                        <div style="font-size: 2rem; font-weight: 700; color: var(--text-main); margin-bottom: 1.5rem;">$124,500.00</div>
+                        <div class="mockup-row">
+                            <div class="mockup-icon" style="background: rgba(22, 110, 247, 0.2);"></div>
+                            <div style="flex:1;">
+                                <div class="mockup-line" style="width: 60%; margin-bottom: 6px;"></div>
+                                <div class="mockup-line" style="width: 40%; opacity: 0.5;"></div>
+                            </div>
+                        </div>
+                        <div class="mockup-row">
+                            <div class="mockup-icon" style="background: rgba(67, 165, 70, 0.2);"></div>
+                            <div style="flex:1;">
+                                <div class="mockup-line" style="width: 80%; margin-bottom: 6px;"></div>
+                                <div class="mockup-line" style="width: 30%; opacity: 0.5;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-mockup card-2">
+                        <div style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">Recent Transfer</div>
+                        <div style="display:flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                            <div style="font-weight: 600;">USD → EUR</div>
+                            <div style="color: var(--success); font-weight: 700;">+€420.00</div>
+                        </div>
+                        <div class="mockup-line" style="width: 100%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<a href="download.html">Download</a>
+    <section id="features" class="section">
+        <div class="container">
+            <div class="reveal" style="text-align: center; max-width: 700px; margin: 0 auto 1rem;">
+                <h2 style="font-size: 3rem;">Engineered for <span class="gradient-text">complex finances.</span></h2>
+                <p>We believe personal finance goes beyond simple budgeting. That's why we've built advanced tools to handle real-world financial scenarios.</p>
+            </div>
 
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="var(--primary)" stroke-width="2" fill="rgba(22,110,247,0.1)"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="var(--accent)" stroke-width="2"/>
+                            <path d="M2 12h20" stroke="var(--primary)" stroke-width="2"/>
+                            <circle cx="18" cy="18" r="5" fill="var(--warning)" stroke="var(--bg-color)" stroke-width="2"/>
+                            <path d="M18 15.5v5m-1.5-2.5h3" stroke="var(--bg-color)" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Global Multi-Currency</h3>
+                    <p>Travel or invest globally? Finance Manager inherently supports multiple currencies, letting you track assets natively without manual conversions.</p>
+                </div>
+
+                <div class="feature-card reveal" style="transition-delay: 0.1s;">
+                    <div class="feature-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <rect x="3" y="4" width="18" height="16" rx="3" stroke="var(--primary)" stroke-width="2" fill="rgba(22,110,247,0.1)"/>
+                            <path d="M6 9l3 -3 3 3" stroke="var(--success)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9 6v8" stroke="var(--success)" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M18 15l-3 3-3-3" stroke="var(--error)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15 18v-8" stroke="var(--error)" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Smart Inter-Currency Transfers</h3>
+                    <p>Moving money between international accounts is seamless. Built-in logic handles currency exchanges and balance adjustments automatically.</p>
+                </div>
+                
+                <div class="feature-card reveal" style="transition-delay: 0.2s;">
+                    <div class="feature-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <rect x="4" y="6" width="16" height="14" rx="2" stroke="var(--primary)" stroke-width="2" fill="rgba(22,110,247,0.1)"/>
+                            <path d="M16 10h.01M16 14h.01" stroke="var(--primary)" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M8 10h4m-4 4h4" stroke="var(--text-muted)" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="12" cy="6" r="4.5" fill="var(--warning)" stroke="var(--bg-color)" stroke-width="2"/>
+                            <path d="M12 4.5v3m-1.5-1.5h3" stroke="var(--bg-color)" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Loans & Debt Management</h3>
+                    <p>Don't lose track of borrowed cash. Keep a dedicated ledger for loans given out or debts owed, complete with settlement tracking.</p>
+                </div>
+
+                <div class="feature-card reveal" style="transition-delay: 0.3s;">
+                    <div class="feature-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <rect x="3" y="3" width="7" height="7" rx="2" fill="var(--success)"/>
+                            <rect x="14" y="3" width="7" height="7" rx="2" fill="var(--warning)"/>
+                            <rect x="3" y="14" width="7" height="7" rx="2" fill="var(--accent)"/>
+                            <rect x="14" y="14" width="7" height="7" rx="2" fill="var(--primary)"/>
+                            <path d="M6.5 10v4m11-4v4m-11-2h11" stroke="var(--text-muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Infinite Granularity</h3>
+                    <p>Create custom accounts, categories, and tags. Whether it's a crypto wallet or physical cash, structure your ledger exactly how you want.</p>
+                </div>
+
+                <div class="feature-card reveal" style="transition-delay: 0.4s;">
+                    <div class="feature-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="var(--primary)" stroke-width="2"/>
+                            <path d="M12 2a10 10 0 0 1 10 10h-10v-10z" fill="var(--accent)"/>
+                            <path d="M12 12h10a10 10 0 0 1-10 10v-10z" fill="var(--warning)"/>
+                            <path d="M12 12v10a10 10 0 0 1-10-10h10z" fill="var(--success)"/>
+                            <path d="M12 12h-10a10 10 0 0 1 10-10v10z" fill="rgba(22,110,247,0.1)"/>
+                        </svg>
+                    </div>
+                    <h3>Visual Insights</h3>
+                    <p>Dive deep into your spending behaviors. Generative charts and aesthetic analytics help you spot trends faster and make better decisions.</p>
+                </div>
+
+                <div class="feature-card reveal" style="transition-delay: 0.5s;">
+                    <div class="feature-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="var(--primary)" stroke-width="2" fill="rgba(22,110,247,0.1)"/>
+                            <circle cx="12" cy="11" r="3" stroke="var(--success)" stroke-width="2"/>
+                            <path d="M12 14v3" stroke="var(--success)" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M9 11c0-1.66 1.34-3 3-3s3 1.34 3 3" stroke="var(--success)" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Absolute Privacy</h3>
+                    <p>Your financial data is yours alone. Operating entirely offline, Finance Manager guarantees zero telemetry and zero cloud lock-in.</p>
+                </div>
+
+                <!-- New Added Features -->
+                <div class="feature-card reveal" style="transition-delay: 0.1s;">
+                    <div class="feature-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M8 8C4 8 2 11 2 15s2 7 6 7c3 0 5-2 6-4 1-2 3-4 6-4 4 0 6 3 6 7s-2 7-6 7c-3 0-5-2-6-4-1-2-3-4-6-4z" stroke="var(--primary)" stroke-width="2" fill="rgba(22,110,247,0.1)"/>
+                            <path d="M14 15l2-2 2 2m-2-2v6" stroke="var(--success)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Unlimited Transactions</h3>
+                    <p>Log as many expenses and incomes as you want without ever hitting a paywall or a forced upgrade. Your ledger is truly unlimited.</p>
+                </div>
+
+                <div class="feature-card reveal" style="transition-delay: 0.2s;">
+                    <div class="feature-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <rect x="2" y="6" width="16" height="12" rx="2" stroke="var(--primary)" stroke-width="2" fill="rgba(22,110,247,0.1)"/>
+                            <path d="M6 4h14a2 2 0 0 1 2 2v10" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="14" cy="12" r="2" fill="var(--warning)"/>
+                        </svg>
+                    </div>
+                    <h3>Wallets & Accounts</h3>
+                    <p>Manage diverse assets seamlessly. Track cash wallets, checking accounts, and dedicated savings accounts across multiple currencies.</p>
+                </div>
+
+                <div class="feature-card reveal" style="transition-delay: 0.3s;">
+                    <div class="feature-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M3 6h6l2 2h10v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z" stroke="var(--warning)" stroke-width="2" fill="rgba(255,152,0,0.1)"/>
+                            <path d="M8 14h8M8 18h5" stroke="var(--success)" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Smart Categories</h3>
+                    <p>Organize your spending with custom categories. Easily classify transactions to see exactly where your money is going every month.</p>
+                </div>
+
+                <div class="feature-card reveal" style="transition-delay: 0.4s;">
+                    <div class="feature-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="var(--primary)" stroke-width="2"/>
+                            <circle cx="12" cy="12" r="5" stroke="var(--error)" stroke-width="2" fill="rgba(244,67,54,0.1)"/>
+                            <path d="M12 2v4M12 18v4M2 12h4M18 12h4" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Advanced Budgeting</h3>
+                    <p>Set strict limits for individual categories or overall spending. Monitor your budget progress in real-time to avoid overspending.</p>
+                </div>
+
+                <div class="feature-card reveal" style="transition-delay: 0.5s;">
+                    <div class="feature-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2a9.99 9.99 0 0 1 8 4 4 4 0 0 1-4 4h-2a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h3.5c1.4 0 2.5 1.1 2.5 2.5A6.5 6.5 0 0 1 12 22z" stroke="var(--accent)" stroke-width="2" fill="rgba(139,92,246,0.1)"/>
+                            <circle cx="7.5" cy="10.5" r="1.5" fill="var(--primary)"/>
+                            <circle cx="10.5" cy="6.5" r="1.5" fill="var(--success)"/>
+                            <circle cx="15.5" cy="7.5" r="1.5" fill="var(--warning)"/>
+                        </svg>
+                    </div>
+                    <h3>Complete Customization</h3>
+                    <p>Tailor the app to your preferences. From adjusting the dashboard layout to choosing how data is displayed, make it truly yours.</p>
+                </div>
+
+                <div class="feature-card reveal" style="transition-delay: 0.1s;">
+                    <div class="feature-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M12 15v-9m-3 3l3-3 3 3" stroke="var(--success)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20 16v3a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-3" stroke="var(--primary)" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M8 21h8" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Backup & Export Reports</h3>
+                    <p>Never lose your data. Securely backup and restore your database, or export your financial history to PDF and CSV reports.</p>
+                </div>
+
+                <div class="feature-card reveal" style="transition-delay: 0.2s;">
+                    <div class="feature-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" stroke="var(--warning)" stroke-width="2" fill="rgba(255,152,0,0.1)"/>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0" stroke="var(--error)" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="18" cy="6" r="3" fill="var(--error)"/>
+                        </svg>
+                    </div>
+                    <h3>Custom Alerts</h3>
+                    <p>Set custom notifications for low balances, upcoming loan settlements, or when you are nearing your category budget limits.</p>
+                </div>
+
+                <div class="feature-card reveal" style="transition-delay: 0.3s;">
+                    <div class="feature-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="9" stroke="var(--primary)" stroke-width="2"/>
+                            <path d="M12 3a9 9 0 0 1 0 18z" fill="var(--accent)"/>
+                            <path d="M12 3a9 9 0 0 0 0 18z" fill="rgba(22,110,247,0.1)"/>
+                        </svg>
+                    </div>
+                    <h3>Multi-Themed App</h3>
+                    <p>Switch seamlessly between a beautifully crafted Light mode and a sleek Dark mode. Designed to be easy on the eyes, day or night.</p>
+                </div>
+
+                <div class="feature-card reveal" style="transition-delay: 0.4s;">
+                    <div class="feature-icon-wrapper">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z" stroke="var(--success)" stroke-width="2" fill="rgba(67,165,70,0.1)"/>
+                            <path d="M12 9h4" stroke="var(--primary)" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Interactive & Filter Analytics</h3>
+                    <p>Slice and dice your financial data. Use custom duration filters and interactive charts to drill down into specific transaction patterns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="open-source" class="section" style="background: rgba(139, 92, 246, 0.03); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 4rem; flex-wrap: wrap;">
+            <div class="reveal" style="flex: 1; min-width: 300px; background: #0B1121; padding: 2.5rem; border-radius: 24px; border: 1px solid rgba(255,255,255,0.08); color: #F8FAFC; box-shadow: 0 30px 60px rgba(0,0,0,0.3); font-family: monospace; font-size: 1rem;">
+                <div style="display: flex; gap: 8px; margin-bottom: 1.5rem;">
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #F44336;"></div>
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #FF9800;"></div>
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #43A546;"></div>
+                </div>
+                <div style="color: #64748B;">// Handling inter-currency transfers</div>
+                <br>
+                <div style="color: #E2E8F0; line-height: 1.7;">
+                    <span style="color: #C678DD;">fun</span> <span style="color: #61AFEF;">processTransfer</span>(<br>
+                    &nbsp;&nbsp;source: <span style="color: #E5C07B;">Account</span>,<br>
+                    &nbsp;&nbsp;target: <span style="color: #E5C07B;">Account</span>,<br>
+                    &nbsp;&nbsp;amount: <span style="color: #E5C07B;">Double</span>,<br>
+                    &nbsp;&nbsp;exchangeRate: <span style="color: #E5C07B;">Double</span><br>
+                    ) {<br>
+                    &nbsp;&nbsp;<span style="color: #C678DD;">val</span> converted = amount * exchangeRate<br>
+                    &nbsp;&nbsp;source.balance -= amount<br>
+                    &nbsp;&nbsp;target.balance += converted<br>
+                    &nbsp;&nbsp;<span style="color: #61AFEF;">logTransaction</span>(TransferRecord(source, target))<br>
+                    }
+                </div>
+            </div>
+            <div class="reveal" style="flex: 1; min-width: 300px;">
+                <h2 style="font-size: 3rem;">Transparent by <br><span class="gradient-text">design.</span></h2>
+                <p>Trust is paramount when dealing with your money. That's why every line of Finance Manager's source code is publicly accessible on GitHub. Built natively with modern Kotlin architecture.</p>
+                <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                    <a href="https://github.com/aqibshahzad4485/financemanager" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View Repository</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="section">
+        <div class="container">
+            <h2 class="reveal" style="text-align: center; font-size: 3rem; margin-bottom: 4rem;">Got <span class="gradient-text">questions?</span></h2>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="reveal" style="margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--border-color);">
+                    <h3 style="font-size: 1.35rem;">What makes Finance Manager different?</h3>
+                    <p style="margin-bottom: 0;">Unlike basic expense trackers, we support advanced mechanics like multi-currency portfolios, peer-to-peer loan ledgers, and dynamic inter-currency transfers. All while remaining strictly ad-free and open-source.</p>
+                </div>
+                
+                <div class="reveal" style="margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--border-color);">
+                    <h3 style="font-size: 1.35rem;">Are there any hidden subscriptions?</h3>
+                    <p style="margin-bottom: 0;">Absolutely none. The application is completely free to download, use, and modify. We believe financial tools shouldn't cost you money.</p>
+                </div>
+
+                <div class="reveal" style="margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--border-color);">
+                    <h3 style="font-size: 1.35rem;">How does multi-currency work?</h3>
+                    <p style="margin-bottom: 0;">You can set a base currency for your portfolio, while individual accounts (like a foreign bank account) can be denominated in different currencies. Transfers between these accounts allow you to log specific exchange rates.</p>
+                </div>
+
+                <div class="reveal" style="margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--border-color);">
+                    <h3 style="font-size: 1.35rem;">Where is my data stored?</h3>
+                    <p style="margin-bottom: 0;">Locally on your smartphone. We do not operate any backend servers or cloud sync infrastructure to ensure your financial footprint remains entirely private.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer reveal">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" style="grid-column: span 2;">
+                    <a href="index.html" class="logo" style="margin-bottom: 1rem;">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" stroke="var(--primary)" stroke-width="2" fill="rgba(22,110,247,0.1)"/>
+                            <path d="M16 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" fill="var(--warning)"/>
+                            <path d="M22 12h-4" stroke="var(--primary)" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M8 3h8a2 2 0 0 1 2 2v2H6V5a2 2 0 0 1 2-2z" stroke="var(--accent)" stroke-width="2" fill="rgba(139, 92, 246, 0.1)"/>
+                        </svg>
+                        Finance Manager
+                    </a>
+                    <p style="max-width: 300px;">A modern, uncompromising toolkit for tracking your wealth. Offline-first, strictly private.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Application</h4>
+                    <ul>
+                        <li><a href="https://github.com/aqibshahzad4485/financemanager/releases">Download APK</a></li>
+                        <li><a href="#features">Capabilities</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Open Source</h4>
+                    <ul>
+                        <li><a href="https://github.com/aqibshahzad4485/financemanager" target="_blank" rel="noopener noreferrer">Source Code</a></li>
+                        <li><a href="https://github.com/aqibshahzad4485/financemanager/issues" target="_blank" rel="noopener noreferrer">Issue Tracker</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal & Support</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aqib Shahzad. Released under the MIT License.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
-
 </html>
