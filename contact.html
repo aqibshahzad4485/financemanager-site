@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Finance Manager</title>
+    <meta name="description" content="Get in touch for feedback, suggestions, or support regarding Finance Manager.">
+    <link rel="stylesheet" href="index.css?v=3">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪙</text></svg>">
+</head>
+<body>
+    <div class="bg-mesh"></div>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" stroke="var(--primary)" stroke-width="2" fill="rgba(22,110,247,0.1)"/>
+                    <path d="M16 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" fill="var(--warning)"/>
+                    <path d="M22 12h-4" stroke="var(--primary)" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M8 3h8a2 2 0 0 1 2 2v2H6V5a2 2 0 0 1 2-2z" stroke="var(--accent)" stroke-width="2" fill="rgba(139, 92, 246, 0.1)"/>
+                </svg>
+                Finance Manager
+            </a>
+            <div class="nav-links">
+                <a href="index.html#features">Capabilities</a>
+                <a href="index.html#open-source">Open Source</a>
+                <a href="contact.html">Contact</a>
+                <a href="https://github.com/aqibshahzad4485/financemanager" target="_blank" rel="noopener noreferrer">Source Code</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <svg viewBox="0 0 24 24"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="min-height: calc(100vh - 300px); display: flex; align-items: center; justify-content: center; padding: 140px 2rem 5rem;">
+        <div class="legal-content reveal" style="width: 100%; max-width: 600px; margin: 0; padding: 3rem;">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h1 style="font-size: 2.5rem; margin-bottom: 0.5rem;">Get in <span class="gradient-text">Touch.</span></h1>
+                <p>Have feedback, a suggestion, or a complaint? Just want to say hi? Fill out the form below and we'll draft an email directly to the developer.</p>
+            </div>
+
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address (Optional)</label>
+                    <input type="email" id="email" class="form-control" placeholder="john@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="category" class="form-label">Category</label>
+                    <select id="category" class="form-control" required>
+                        <option value="General Inquiry">Just an email to contact</option>
+                        <option value="Feedback">Feedback</option>
+                        <option value="Suggestion">Suggestion</option>
+                        <option value="Feature Request">Feature Request</option>
+                        <option value="Complaint">Complaint</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea id="message" class="form-control" placeholder="How can we help you?" maxlength="500" required></textarea>
+                    <div class="char-counter" id="charCounter">0/500</div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem; font-size: 1.1rem; padding: 1rem;">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    Send via Email App
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" style="grid-column: span 2;">
+                    <a href="index.html" class="logo" style="margin-bottom: 1rem;">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" stroke="var(--primary)" stroke-width="2" fill="rgba(22,110,247,0.1)"/>
+                            <path d="M16 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" fill="var(--warning)"/>
+                            <path d="M22 12h-4" stroke="var(--primary)" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M8 3h8a2 2 0 0 1 2 2v2H6V5a2 2 0 0 1 2-2z" stroke="var(--accent)" stroke-width="2" fill="rgba(139, 92, 246, 0.1)"/>
+                        </svg>
+                        Finance Manager
+                    </a>
+                    <p style="max-width: 300px;">A modern, uncompromising toolkit for tracking your wealth. Offline-first, strictly private.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal & Support</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aqib Shahzad. Released under the MIT License.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Character counter logic
+        const messageInput = document.getElementById('message');
+        const charCounter = document.getElementById('charCounter');
+        const maxLength = messageInput.getAttribute('maxlength');
+
+        messageInput.addEventListener('input', function() {
+            const currentLength = this.value.length;
+            charCounter.textContent = `${currentLength}/${maxLength}`;
+            
+            if (currentLength >= maxLength) {
+                charCounter.classList.add('limit-reached');
+            } else {
+                charCounter.classList.remove('limit-reached');
+            }
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const category = document.getElementById('category').value;
+            const message = document.getElementById('message').value;
+
+            const developerEmail = "aqib.shahzad4485+financemanager@gmail.com";
+            const subject = `[${category}] Finance Manager: Message from ${name}`;
+            
+            let body = `Name: ${name}\n`;
+            if (email) {
+                body += `Email: ${email}\n`;
+            }
+            body += `Category: ${category}\n\n`;
+            body += `Message:\n${message}\n`;
+
+            const mailtoLink = `mailto:${developerEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            window.location.href = mailtoLink;
+        });
+    </script>
+</body>
+</html>
