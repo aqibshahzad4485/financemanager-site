@@ -44,4 +44,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', revealOnScroll);
     revealOnScroll(); // Trigger once on load
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
+    if(mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        // Close menu on click outside
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                navLinks.classList.remove('active');
+            }
+        });
+        // Close menu when a link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    }
 });

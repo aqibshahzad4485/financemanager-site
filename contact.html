@@ -22,6 +22,11 @@
                 </svg>
                 Finance Manager
             </a>
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
             <div class="nav-links">
                 <a href="index.html#features">Capabilities</a>
                 <a href="index.html#open-source">Open Source</a>
@@ -113,9 +118,10 @@
         const messageInput = document.getElementById('message');
         const charCounter = document.getElementById('charCounter');
         const maxLength = messageInput.getAttribute('maxlength');
+        const categoryInput = document.getElementById('category');
 
-        messageInput.addEventListener('input', function() {
-            const currentLength = this.value.length;
+        function updateMailto() {
+            const currentLength = messageInput.value.length;
             charCounter.textContent = `${currentLength}/${maxLength}`;
             
             if (currentLength >= maxLength) {
@@ -147,6 +153,28 @@
             
             window.location.href = mailtoLink;
         });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        if(mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+            // Close menu on click outside
+            document.addEventListener('click', (e) => {
+                if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                    navLinks.classList.remove('active');
+                }
+            });
+            // Close menu when a link is clicked
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                });
+            });
+        }
     </script>
 </body>
 </html>
