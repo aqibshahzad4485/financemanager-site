@@ -120,7 +120,7 @@
         const maxLength = messageInput.getAttribute('maxlength');
         const categoryInput = document.getElementById('category');
 
-        function updateMailto() {
+        messageInput.addEventListener('input', function() {
             const currentLength = messageInput.value.length;
             charCounter.textContent = `${currentLength}/${maxLength}`;
             
