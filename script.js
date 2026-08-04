@@ -66,4 +66,29 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Automatically fetch latest APK download URL from GitHub Releases
+    const fetchLatestApk = async () => {
+        const downloadBtns = document.querySelectorAll('.apk-download-btn');
+        if (!downloadBtns.length) return;
+
+        try {
+            const response = await fetch('https://api.github.com/repos/aqibshahzad4485/financemanager/releases/latest');
+            if (!response.ok) return;
+            const data = await response.json();
+            
+            // Find asset ending with .apk
+            const apkAsset = data.assets && data.assets.find(asset => asset.name.endsWith('.apk'));
+            if (apkAsset && apkAsset.browser_download_url) {
+                downloadBtns.forEach(btn => {
+                    btn.href = apkAsset.browser_download_url;
+                });
+            }
+        } catch (err) {
+            console.warn('Could not fetch latest release URL dynamically:', err);
+        }
+    };
+
+    fetchLatestApk();
 });
+
