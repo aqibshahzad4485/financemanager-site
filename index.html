@@ -155,31 +155,30 @@
     </section>
 
     <section id="open-source" class="section" style="background: rgba(139, 92, 246, 0.03); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
-        <div class="container" style="display: flex; align-items: center; justify-content: space-between; gap: 4rem; flex-wrap: wrap;">
-            <div class="reveal" style="flex: 1; min-width: 300px; background: #0B1121; padding: 2.5rem; border-radius: 24px; border: 1px solid rgba(255,255,255,0.08); color: #F8FAFC; box-shadow: 0 30px 60px rgba(0,0,0,0.3); font-family: monospace; font-size: 1rem;">
-                <div style="display: flex; gap: 8px; margin-bottom: 1.5rem;">
-                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #F44336;"></div>
-                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #FF9800;"></div>
-                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #43A546;"></div>
+        <div class="container open-source-container">
+            <div class="code-window reveal">
+                <div class="code-window-dots">
+                    <div style="width: 10px; height: 10px; border-radius: 50%; background: #F44336;"></div>
+                    <div style="width: 10px; height: 10px; border-radius: 50%; background: #FF9800;"></div>
+                    <div style="width: 10px; height: 10px; border-radius: 50%; background: #43A546;"></div>
                 </div>
-                <div style="color: #64748B;">// Handling inter-currency transfers</div>
-                <br>
-                <div style="color: #E2E8F0; line-height: 1.7;">
-                    <span style="color: #C678DD;">fun</span> <span style="color: #61AFEF;">processTransfer</span>(<br>
-                    &nbsp;&nbsp;source: <span style="color: #E5C07B;">Account</span>,<br>
-                    &nbsp;&nbsp;target: <span style="color: #E5C07B;">Account</span>,<br>
-                    &nbsp;&nbsp;amount: <span style="color: #E5C07B;">Double</span>,<br>
-                    &nbsp;&nbsp;exchangeRate: <span style="color: #E5C07B;">Double</span><br>
-                    ) {<br>
-                    &nbsp;&nbsp;<span style="color: #C678DD;">val</span> converted = amount * exchangeRate<br>
-                    &nbsp;&nbsp;source.balance -= amount<br>
-                    &nbsp;&nbsp;target.balance += converted<br>
-                    &nbsp;&nbsp;<span style="color: #61AFEF;">logTransaction</span>(TransferRecord(source, target))<br>
-                    }
+                <div class="code-comment">// Handling inter-currency transfers</div>
+                <div class="code-snippet-body">
+                    <div><span style="color: #C678DD;">fun</span> <span style="color: #61AFEF;">processTransfer</span>(</div>
+                    <div>&nbsp;&nbsp;source: <span style="color: #E5C07B;">Account</span>,</div>
+                    <div>&nbsp;&nbsp;target: <span style="color: #E5C07B;">Account</span>,</div>
+                    <div>&nbsp;&nbsp;amount: <span style="color: #E5C07B;">Double</span>,</div>
+                    <div>&nbsp;&nbsp;exchangeRate: <span style="color: #E5C07B;">Double</span></div>
+                    <div>) {</div>
+                    <div>&nbsp;&nbsp;<span style="color: #C678DD;">val</span> converted = amount * exchangeRate</div>
+                    <div>&nbsp;&nbsp;source.balance -= amount</div>
+                    <div>&nbsp;&nbsp;target.balance += converted</div>
+                    <div>&nbsp;&nbsp;<span style="color: #61AFEF;">logTransaction</span>(TransferRecord(source, target))</div>
+                    <div>}</div>
                 </div>
             </div>
-            <div class="reveal" style="flex: 1; min-width: 300px;">
-                <h2 style="font-size: 3rem;">Transparent by <br><span class="gradient-text">design.</span></h2>
+            <div class="reveal" style="flex: 1; width: 100%;">
+                <h2 style="font-size: clamp(2rem, 5vw, 3rem);">Transparent by <br><span class="gradient-text">design.</span></h2>
                 <p>Trust is paramount when dealing with your money. That's why every line of Finance Manager's source code is publicly accessible on GitHub. Built natively with modern Kotlin architecture.</p>
                 <div style="display: flex; gap: 1rem; margin-top: 2rem;">
                     <a href="https://github.com/aqibshahzad4485/financemanager" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View Repository</a>
@@ -219,7 +218,7 @@
     <footer class="footer reveal">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-col" style="grid-column: span 2;">
+                <div class="footer-col footer-brand">
                     <a href="index.html" class="logo" style="margin-bottom: 1rem;">
                         <svg viewBox="0 0 24 24" fill="none">
                             <path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" stroke="var(--primary)" stroke-width="2" fill="rgba(22,110,247,0.1)"/>
