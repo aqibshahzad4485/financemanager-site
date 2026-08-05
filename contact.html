@@ -28,10 +28,10 @@
                 </svg>
             </button>
             <div class="nav-links">
-                <a href="index.html#features">Capabilities</a>
+                <a href="features.html">Capabilities</a>
                 <a href="downloads.html">Downloads</a>
                 <a href="index.html#open-source">Open Source</a>
-                <a href="contact.html">Contact</a>
+                <a href="contact.html" style="color: var(--primary); font-weight: 700;">Contact</a>
                 <a href="https://github.com/aqibshahzad4485/financemanager" target="_blank" rel="noopener noreferrer">Source Code</a>
                 <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
                     <svg viewBox="0 0 24 24"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -120,6 +120,21 @@
         const charCounter = document.getElementById('charCounter');
         const maxLength = messageInput.getAttribute('maxlength');
         const categoryInput = document.getElementById('category');
+
+        // Parse URL Parameters to pre-fill category if passed (e.g., ?category=Feature+Request)
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const categoryParam = urlParams.get('category');
+            if (categoryParam) {
+                const categoryOption = Array.from(categoryInput.options).find(opt => 
+                    opt.value.toLowerCase() === categoryParam.toLowerCase() ||
+                    opt.text.toLowerCase() === categoryParam.toLowerCase()
+                );
+                if (categoryOption) {
+                    categoryInput.value = categoryOption.value;
+                }
+            }
+        });
 
         messageInput.addEventListener('input', function() {
             const currentLength = messageInput.value.length;

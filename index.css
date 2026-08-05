@@ -1012,4 +1012,205 @@ code {
     }
 }
 
+/* ==========================================================================
+   Features & Roadmap Page Custom Styles
+   ========================================================================== */
+.features-container {
+    padding-top: 140px;
+    padding-bottom: 5rem;
+}
+
+.features-hero {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.features-hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 1rem;
+}
+
+.category-header {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.category-header h2 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.category-tag {
+    font-size: 0.85rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    background: var(--glow-color);
+    color: var(--primary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Roadmap Grid & Cards */
+.roadmap-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.roadmap-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.roadmap-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(22, 110, 247, 0.3);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.roadmap-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.roadmap-header h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.status-in-progress {
+    background: rgba(67, 165, 70, 0.15);
+    color: var(--success);
+    border: 1px solid rgba(67, 165, 70, 0.3);
+}
+
+.status-planned {
+    background: rgba(22, 110, 247, 0.15);
+    color: var(--primary);
+    border: 1px solid rgba(22, 110, 247, 0.3);
+}
+
+.status-consideration {
+    background: rgba(139, 92, 246, 0.15);
+    color: var(--accent);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+/* Feature Request CTA Banner */
+.request-feature-cta {
+    background: linear-gradient(135deg, rgba(22, 110, 247, 0.1), rgba(139, 92, 246, 0.12));
+    border: 1.5px solid rgba(22, 110, 247, 0.3);
+    border-radius: 24px;
+    padding: 3.5rem 3rem;
+    margin-top: 5rem;
+    text-align: center;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.request-feature-cta::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--accent), var(--warning));
+}
+
+.request-feature-cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.request-feature-cta p {
+    max-width: 650px;
+    margin: 0 auto 2rem;
+    font-size: 1.15rem;
+}
+
+/* Headline Feature Card Extensions */
+.headline-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.headline-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 2.25rem;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.headline-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(22, 110, 247, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.explore-more-banner {
+    margin-top: 4rem;
+    text-align: center;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 24px;
+    padding: 2.5rem 2rem;
+    backdrop-filter: blur(16px);
+}
+
+@media (max-width: 768px) {
+    .features-container {
+        padding-top: 100px;
+    }
+    .request-feature-cta {
+        padding: 2.5rem 1.5rem;
+        margin-top: 3.5rem;
+    }
+    .request-feature-cta h2 {
+        font-size: 1.8rem;
+    }
+    .headline-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 
