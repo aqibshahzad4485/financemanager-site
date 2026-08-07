@@ -1,0 +1,19 @@
+{
+  "lastUpdated": "2026-08-07T04:40:00.860Z",
+  "builds": [
+    {
+      "version": "1.0.2",
+      "filename": "FinanceManager_V1.0.2.apk",
+      "size": 37759059,
+      "date": "2026-08-07",
+      "description": "Maintenance release with updated database optimizations and UI bug fixes."
+    },
+    {
+      "version": "1.0.1",
+      "filename": "FinanceManager_V1.0.1.apk",
+      "size": 37755047,
+      "date": "2026-08-05",
+      "description": "Initial production release featuring multi-currency wallets, debt management, analytics charts, and 100% private offline architecture."
+    }
+  ]
+}
