@@ -1,6 +1,13 @@
 {
-  "lastUpdated": "2026-08-09T22:46:26.518Z",
+  "lastUpdated": "2026-08-16T16:24:17.302Z",
   "builds": [
+    {
+      "version": "1.0.5",
+      "filename": "FinanceManager_V1.0.5.apk",
+      "size": 37899730,
+      "date": "2026-08-16",
+      "description": "Release build v1.0.5 featuring full offline capabilities and performance optimizations."
+    },
     {
       "version": "1.0.4",
       "filename": "FinanceManager_V1.0.4.apk",
